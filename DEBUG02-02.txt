@@ -17,15 +17,18 @@ stop
 
 housekeeping()
    output "Enter score for test 1 or a negative number to quit"
+   input test1
 return
 
 mainLoop()
    output "Enter score for test 2"
    input test2
+   output "Enter score for test 3"
+   input test3
    average = (test1 + test2 + test3) / 3
    output "Average is ", average
    output "Enter score for test 1 or a negative number to quit"
-   input tesst1
+   input test1
 return
 
 endOfJob()
