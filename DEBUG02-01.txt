@@ -4,7 +4,7 @@ start
    Declarations
       num test1
       num test2
-      num test2
+      num test3
       num average
    output "Enter score for test 1 
    input test1
@@ -12,6 +12,6 @@ start
    input test2
    output "Enter score for test 3 "
    input test3
-   average = test1 + test2 + test3 / 3
-   output "Average is ", answer
+   average = (test1 + test2 + test3) / 3
+   output "Average is ", average
 end
