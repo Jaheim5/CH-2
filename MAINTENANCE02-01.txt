@@ -7,8 +7,8 @@
 start
    Declarations
       num price
-      num STATE_TAX_RATE = 0.06
-      num CITY_TAX_RATE = 0.02
+      num stateTaxRate = 0.06
+      num cityTaxRate = 0.02
       num totalTax
       num total
    startUp()
@@ -19,15 +19,19 @@ start
 stop
 
 startUp()
+   output "Enter the state sales tax rate as a decimal"
+   input stateTaxRate
+   output "Enter the city sales tax rate as a decimal"
+   input cityTaxRate
    output "Enter a price or 0 to quit"
    input price
 return
 
 mainLoop()
-   totalTax = price * STATE_TAX_RATE + price * CITY_TAX_RATE
+   totalTax = price * stateTaxRate + price * cityTaxRate
    total = price + totalTax
-   output "Price is " , price, " and total tax is ", totalTax
-   output "Total is ", total
+   output "Price is" , price, "and total tax is", totalTax
+   output "Total is", total
    output "Enter a price or 0 to quit"
    input price
 return
